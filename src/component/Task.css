@@ -1,0 +1,174 @@
+.taskContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: 1px solid transparent;
+}
+
+.subTaskContainer {
+  position: relative;
+  height: 100%;
+  margin: 1rem 4rem;
+  overflow-y: scroll;
+
+  @media (max-width: 768px) {
+    margin: 1rem 1.5rem;
+  }
+
+  /* Hide the scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.subTaskContainer::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.tasksCheckbox {
+  padding:0.4rem 1rem;
+  border: 1px solid rgb(97, 97, 94);
+  border-radius:1rem;
+  background-color:rgb(58, 57, 57);
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+.labels {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: end;
+  }
+}
+
+.taskLabels {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskDetails {
+  color: white;
+  background-color:transparent;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.taskTimeDates {
+  position: relative;
+  height: 100%;
+  color: #24d5cb;
+  margin-right: 1em;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.editDoneButton {
+  position: relative;
+  width: 20%;
+  display: flex;
+  margin-bottom:0.2em;
+  flex-direction: row;
+  color: white;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+    width:37%;
+  }
+}
+
+.button1,
+.button2 {
+  display: inline-block;
+  height: 1rem;
+  padding: 0.3em 0.5em;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.button1 {
+  background-color: blue;
+  border: 2px solid blue;
+}
+
+.button2 {
+  background-color: red;
+  border: 2px solid red;
+}
+
+.button1:hover,
+.button2:hover {
+  background-color: transparent;
+}
+
+/* .taskLabels {
+  opacity: 0.3;
+} */
+
+
+.taskAndEditForm{
+  display:flex;
+  flex-direction: column;
+}
+
+.editForm{
+  position:relative;
+  width:100%;
+  height:5rem;
+  padding:0.5rem 1rem;
+}
+.editForm input{
+  position:relative;
+  width:84%;
+  background-color:transparent;
+  height:2rem;
+  border-radius: 0.7rem;
+  text-align: center;
+  @media (max-width: 768px) {
+    width:80%;
+  }
+}
+.editForm button{
+  position:relative;
+  background-color: #24d5cb;
+  width:10%;
+  height:2rem;
+  border-radius: 0.7rem;
+  margin-left:0.5rem;
+  @media (max-width: 768px) {
+    width:15%;
+  }
+}
+
+.editFormContainer{
+  position:relative;
+  width:90%;
+  display:none;
+}
+.editFormContainer.active{
+  display: block;
+  position: relative;
+  width:90%;
+
+}
+
